@@ -14,12 +14,17 @@ R (and RStudio) is a free open source environment, designed especially for stati
 
 **Content:**
 Why R
+
 What is reproducible research
+
 Installation and first run or R and RStudio
+
 Libraries: installing and loading libraries, CRAN, how to find functions/methods you need
+
 Common types of files to use: R scripts vs RMarkdown.
 
 "Hello Research" - working with example RMarkdown document vs r script.
+
 including a dataset from github installed. Working with changing premade file.
 
 Intro to data types: dataframes, numbers, strings, dates.
@@ -29,6 +34,7 @@ Where to get help: stackoverflow, community
 **Libraries:**
 
 rmarkdown
+
 tidyverse
 
 
