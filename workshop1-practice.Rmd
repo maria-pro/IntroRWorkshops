@@ -1,0 +1,246 @@
+---
+title: "Workshop 1"
+author: "Maria Prokofieva"
+date: "28/01/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+---
+title: "Workshop 1: Introduction to R and Rstudio"
+output: html_notebook
+---
+
+![RStudio](img/logo.png)
+
+# Let's keep it rolling!
+
+What I will learn at the end of the tutorial:
+
+- How to install R and RStudio - all ready to go and do awesome things in R! 
+
+- How to navigate in RStudio and not lose your way
+
+- How to use projects
+
+- How to create and use different file formats: R script vs RMarkdown
+
+- How to find, load and use libraries.
+
+- How to assign variables
+
+- How to use inbuilt datasets
+
+- How to load data files
+
+- How to create a basic RMarkdown file
+
+- How to generate summary stats for the dataset
+
+- How to generate simple data viz
+
+-------------
+
+### Resources:
+R for data science, Hadley Wickham https://r4ds.had.co.nz/
+
+### Install R and RStudio 
+
+Start installation with 
+
+1. R from https://cran.rstudio.com/ 
+
+2. RStudio https://rstudio.com/products/rstudio/download/ 
+
+If you do NOT want to install R/Rstudio, you can use a cloud version - 
+
+but you need to create an account there.
+
+## Projects in R
+
+**Project**: all files associated with a particular research project (e.g. data files, R scripts, results, figures)
+
+Click File > New Project
+
+![create](img/rstudio-project-1.png)
+![create](img/rstudio-project-2.png)
+
+## R script vs RMarkdown files
+
+R script: "pure" R code - great for data analysis, not so great for sharing with non-R people
+
+RMarkdown: a file that integrates your narration with the R code. Great for sharing with non-R people!
+
+*Hint*: use R script to prepare your analysis and RMarkdown to communicate it - copy and paste your R code there!
+
+![create](img/files.png)
+
+
+**RScipt**:
+
+![rscript](img/rscript.png)
+
+**RMarkdown**:
+
+https://www.bbc.com/news/entertainment-arts-43146027
+
+* BBC Cookbook for R
+
+https://bbc.github.io/rcookbook/
+
+
+## How to find, load and use libraries.
+
+CRAN https://cran.r-project.org/
+
+Task Views at CRAN: https://cran.r-project.org/web/views/
+
+"Digging" into packages
+
+**Task** Using task view find 2 packages that you are interested in exploring for your research.
+
+
+- installing vs loading packages
+
+```{r eval=FALSE}
+install.packages("tidyverse")
+```
+
+```{r}
+library(tidyverse)
+```
+
+## Data analysis workflow
+
+![rscript](img/data-science-explore.png)
+
+## Coding basics
+
+Use R as a calculator:
+
+```{r}
+1 / 200 * 30
+(59 + 73 + 2) / 3
+sin(pi / 2)
+```
+
+Create new objects with `<-:`
+```{r}
+x <- 3 * 4
+```
+
+To assign values use this format:
+
+```{r eval=FALSE}
+object_name <- value
+```
+
+**Name your variables**:
+
+- start with a letter
+- can only contain letters, numbers, _ and .. 
+
+- Make your names descriptive
+If you usemultiple words - use `snake_case` where you separate lowercase words with _.
+
+```{r}
+new_x<-x
+```
+
+You can inspect an object by typing its name:
+```{r}
+new_x
+```
+
+Text variables
+```{r}
+x <- "hello world"
+x
+
+```
+
+**Task**
+
+Why this code does not work
+
+`my_variable <- 10
+my_varıable
+`
+
+
+**Functions**
+
+R has a large collection of built-in functions that are called like this:
+Libraries (=packages): collection of functions and/or datasets
+
+
+```{r eval=FALSE}
+function_name(arg1 = val1, arg2 = val2, ...)
+```
+
+## Inbuilt datasets
+
+
+
+## How to load data files
+
+## How to create a basic RMarkdown file
+
+**RMarkdown**: a format for writing reproducible, dynamic reports with R
+
+Easy way to generate **dynamic documents**:
+
+- have all functionality of Word + results straight from your analysis + data viz
+
+**Use**: business documents, academic papers and conference presentations, teaching materials for teaching with data
+
+Let's create RMarkdown file:
+
+![create](img/rmarkdown_create.png)
+
+RMarkdown cheatsheet [here](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+RMarkdown parts:
+
+- Meta information
+
+- Text/graphics
+
+- R code (*R chunks*)
+
+![rMarkdowncomponents](img/rmarkdownParts.png)
+
+## How to generate summary stats for the dataset
+
+
+## How to generate simple data viz
+
+## Write a simple R script
+
+
+1. Introduction to R and Rstudio: Data science basics and reproducible research 
+2. Data visualization with R for academic research 
+ 
+3. Publication ready reports for your academic writing with RMarkdown
+ 
+4. Data Wrangling with R ( and tidyverse)
+ 
+5. Exploratory data analysis.
+
+
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
