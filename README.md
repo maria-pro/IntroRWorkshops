@@ -12,31 +12,16 @@ R (and RStudio) is a free open source environment, designed especially for stati
 
 **What to bring**: your laptop, snack and open mind!
 
-**Content:**
-Why R
-
-What is reproducible research
-
-Installation and first run or R and RStudio
-
-Libraries: installing and loading libraries, CRAN, how to find functions/methods you need
-
-Common types of files to use: R scripts vs RMarkdown.
-
-"Hello Research" - working with example RMarkdown document vs r script.
-
-including a dataset from github installed. Working with changing premade file.
-
-Intro to data types: dataframes, numbers, strings, dates.
-
-Where to get help: stackoverflow, community
+**Files**:
+`workshop1.pptx`: PowerPoint presentation
+`workshop1-practice.Rmd`: practical part 
+`avocado.csv`: sample dataset to upload
 
 **Libraries:**
 
-rmarkdown
-
-tidyverse
-
+`rmarkdown`
+`tidyverse`
+`skimr`
 
 ## 2. Data visualization with R for academic research 
 
