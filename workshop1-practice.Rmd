@@ -9,8 +9,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-
 ---
 title: "Workshop 1: Introduction to R and Rstudio"
 output: html_notebook
@@ -61,7 +59,7 @@ If you do NOT want to install R/Rstudio, you can use a cloud version -
 
 but you need to create an account there.
 
-## Projects in R
+### Projects in R
 
 **Project**: all files associated with a particular research project (e.g. data files, R scripts, results, figures)
 
@@ -70,7 +68,7 @@ Click File > New Project
 ![create](img/rstudio-project-1.png)
 ![create](img/rstudio-project-2.png)
 
-## R script vs RMarkdown files
+### R script vs RMarkdown files
 
 R script: "pure" R code - great for data analysis, not so great for sharing with non-R people
 
@@ -94,7 +92,7 @@ https://www.bbc.com/news/entertainment-arts-43146027
 https://bbc.github.io/rcookbook/
 
 
-## How to find, load and use libraries.
+### How to find, load and use libraries.
 
 CRAN https://cran.r-project.org/
 
@@ -115,11 +113,11 @@ install.packages("tidyverse")
 library(tidyverse)
 ```
 
-## Data analysis workflow
+### Data analysis workflow
 
 ![rscript](img/data-science-explore.png)
 
-## Coding basics
+### Coding basics
 
 Use R as a calculator:
 
@@ -171,8 +169,6 @@ Why this code does not work
 `my_variable <- 10
 my_varıable
 `
-
-
 **Functions**
 
 R has a large collection of built-in functions that are called like this:
@@ -183,11 +179,21 @@ Libraries (=packages): collection of functions and/or datasets
 function_name(arg1 = val1, arg2 = val2, ...)
 ```
 
-## Inbuilt datasets
+### Inbuilt datasets
 
-
+```{r eval=FALSE}
+function_name(arg1 = val1, arg2 = val2, ...)
+```
 
 ## How to load data files
+
+```{r}
+big_mac <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-12-22/big-mac.csv')
+
+#big-mac <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-12-22/big-mac.csv')
+
+```
+
 
 ## How to create a basic RMarkdown file
 
@@ -215,32 +221,20 @@ RMarkdown parts:
 
 ![rMarkdowncomponents](img/rmarkdownParts.png)
 
-## How to generate summary stats for the dataset
-
-
-## How to generate simple data viz
-
-## Write a simple R script
-
-
-1. Introduction to R and Rstudio: Data science basics and reproducible research 
-2. Data visualization with R for academic research 
- 
-3. Publication ready reports for your academic writing with RMarkdown
- 
-4. Data Wrangling with R ( and tidyverse)
- 
-5. Exploratory data analysis.
-
-
+## Summary stats for the dataset
 
 ```{r}
-plot(cars)
+data<-mtcars
+head(data)
+
+summary(data)
+
+#install.packages("skimr")
+library (skimr)
+
+glimpse(data)
+
 ```
+**Task**
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
-
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
-
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
-
+Generate descriptive statistics for `big_mac` datase using `summary` and `glimpse` functions. Compare the results
